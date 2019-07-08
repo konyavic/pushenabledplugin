@@ -3,11 +3,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:pushenabledplugin/pushenabledplugin.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('pushenabledplugin');
+  const MethodChannel channel = MethodChannel('com.konyavic.pushenabledplugin/pushenabledplugin');
 
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
-      return '42';
+      return true;
     });
   });
 
@@ -15,7 +15,7 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getPlatformVersion', () async {
-    expect(await Pushenabledplugin.platformVersion, '42');
+  test('areNotificationsEnabled', () async {
+    expect(await Pushenabledplugin.areNotificationsEnabled, true);
   });
 }
