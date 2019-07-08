@@ -1,8 +1,8 @@
 name: pushenabledplugin
 description: A Flutter Plugin to check the enable status of Push Notifications
 version: 0.0.1
-author:
-homepage:
+author: Victor Lee <victorleepub@gmail.com>
+homepage: https://github.com/konyavic/pushenabledplugin
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
